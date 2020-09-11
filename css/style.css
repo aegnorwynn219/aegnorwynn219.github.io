@@ -1,3 +1,143 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --black: #000000;
+  --white: #FFFFFF;
+  --off-white: #F2F3F1;
+  --turqoise: #20948B;
+  --orange: #DE7A22;
+  --brown: #A76349;
+  --dark-blue: #101F25;
+  --green: #6AB187;
+  font-family: 'Montserrat', sans-serif;
 }
+body {
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+}
+/*original NAVBAR START */
+/* .nav-bar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--dark-blue);
+  box-shadow: 0 1px 2px var(--black), 0 2px 2px var(--black);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav-img {
+  width: 400px;
+  height: 105px;
+
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  border: 2px solid blue;
+}   
+.nav-item a {
+  display: block;
+  text-decoration: none;
+  color: #6AB187;
+  padding: 1rem;
+  margin: 0;
+  background-color: blue;
+  height: 100%;
+  border: 2px solid red;
+} */
+/*original NAVBAR END */
+/* NAV BASE STYLING START */
+.nav-bar {
+  background-color: var(--dark-blue);
+  padding: 0 15px;
+  box-shadow: 0 1px 2px var(--dark-blue), 0 1px 2px var(--black);
+}
+.nav-list {
+  list-style-type: none;
+}
+.nav-img {
+  padding: 7.5px 10px 7.5px 0;
+  cursor: grab;
+  cursor: -webkit-grab;
+  z-index: 10;
+}
+.nav-item {
+  padding: 10px;
+}
+.nav-link {
+  color: var(--green);
+  text-decoration: none;
+}
+.nav-link:hover,
+.nav-link:hover::after {
+  color: var(--turqoise);
+}
+/* NAV BASE STYLING END */
+/* MOBILE MENU START */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-link {
+  display: block;
+  padding: 15px 15px;
+}
+.nav-item {
+  text-align: center;
+}
+/* MOBILE MENU END */
+/* DESKTOP MENU START */
+@media all and (min-width: 960px) {
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .nav-list {
+    align-items: center;
+    flex-wrap: nowrap;
+    background: none;
+  }
+  .nav-item {
+    position: relative;
+    display: block;
+    width: auto;
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 3em;
+    font-weight: 600;
+  }
+  .title-p {
+    font-size: 2em;
+  }
+}
+/* DESKTOP MENU END */
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+#welcome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
+.selfie {
+  border-radius: 50%;
+}
+/* 
+    TODO
+    #bio
+    #my-projects
+    #contact
+*/
