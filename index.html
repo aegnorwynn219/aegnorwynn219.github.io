@@ -1,82 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Alien Abduction Order Form</title>
-	<link href="css/forms.css" rel="stylesheet">
-</head>
-<body>
-	<div class="wrapper">
-		<section>
-			<h1>Alien Abduction Order Form</h1>
-			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
-			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
-				<input type="hidden" name="send_to" value="eaioa99@gmail.com">
-				<fieldset>
-					<legend>Your contact information</legend>
-					<label for="name">Your name</label>
-						<input type="text" id="name" name="name">
-					<label for="phone">Phone number</label>
-						<input type="tel" id="phone" name="phone" placeholder="Don't forget your area code">
-					<label for="email">Email</label>
-						<input type="email" id="email" name="email">
-				</fieldset>
-				<fieldset>
-					<legend>About your abduction </legend>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Roland Levai - Web Developer</title>
+		<link rel="stylesheet" content-type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<nav class="nav-bar">
+				<img class="nav-img" src="" alt="My logo showing RL">
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="#welcome" class="nav-link">Welcome</a>
+					</li>
+					<li class="nav-item">
+						<a href="#bio" class="nav-link">Bio</a>
+					</li>
+					<li class="nav-item">
+						<a href="#my-projects" class="nav-link">Work</a>
+					</li>
+					<li class="nav-item">
+						<a href="#contact" class="nav-link">Contact</a>
+					</li>
+					<li class="nav-item">
+						<button class="night-mode"></button>
+					</li>
+				</ul>
+			</nav>
 
-					<label for="date">Requested  date</label>
-						<input type="date" id="date" name="date">
+			<main class="main">
+				<section id="welcome" class="section">
+					<h1 class="title">Hi, I'm Roland,</h1>
+					<p class="title-p">a web developer</p>
+				</section>
+				<section id="bio" class="section">
+					<p>My name is Roland Levai. I'm a 21 year old university student based near Budapest, Hungary and I only recently picked up on web development. I strive to become the best one out there, nonetheless.</p>
+					<p>A bit further down you'll be able to check out some of my previous works and even further down the webpage you'll find my contact info. Or just use the links at the top of the page.</p>
+				</section>
+				<section id="my-projects" class="section">
+					<h2>My projects</h2>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="https://codepen.io/Aegnorwynn219/full/JjXrJby"><img src="./imgs/survey-form-small.png" alt="My Survey Form project for freeCodeCamp"/></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://codepen.io/Aegnorwynn219/full/mdPpJLO"><img src="./imgs/technical-documentation-small.png" alt="My Technical Documentation project for freeCodeCamp"/></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="https://codepen.io/Aegnorwynn219/full/Rwaxpym"><img src="./imgs/portfolio-small.png" alt="My Portfolio project for freeCodeCamp"/></a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+   			  <div class="swiper-button-next"></div>
+				</section>
+				<section id="contact" class="section">
+					<h2>Contact Me</h2>
+					<p>If you want to work with me, send me an email using the form below.</p>
+					<form class="form">
+						<label>Name: <input id="name" type="name" name="name"></label>
+						<label>Email: <input id="email" type="email" name="email"></label>
+						<label>Message: <textarea id="message" name="message"></textarea></label>
+					</form>
+				</section>
+			</main>
+		</div>
 
-					<label for="qty">How many people would you like abducted?</label>
-						<input type="number" id="qty" name="qty" min="1" max="10">
-
-					<p>What type of UFO do you prefer?</p>
-					<label>
-						<input type="radio" name="ufotype" value="classic" checked>Classic oval UFO
-					</label>
-						<label>
-							<input type="radio" name="ufotype" value="starwars">Star Wars-style Imperial cruiser
-						</label>
-						<label>
-							<input type="radio" name="ufotype" value="galactica">Battlestar Galactica-style Viper
-						</label>
-						<label>
-							<input type="radio" name="ufotype" value="borg">Borg-style cube
-						</label>
-
-					<label for="abtype">What type of abduction experience do you want?</label>
-						<select id="abtype" name="abtype">
-							<option selected>Select one...</option>
-							<option value="tour">Tour of the solar system</option>
-							<option value="dinner">Alien dinner and discussion</option>
-							<option value="dance">Alien dance lessons</option>
-							<option value="whale">Whale watching</option>
-						</select>
-					<label for="comments">Special requests:</label>
-						<textarea id="comments" name="comments" placeholder="Tell me everything..."></textarea>
-
-					<label>
-						<input type="checkbox" name="subscribe" value="subscribe" checked>Add me to your email list
-					</label>
-				</fieldset>
-				<button type="submit">Order you abduction experience!!!</button>
-			</form>
-		</section>
-		<aside>
-			<h3>Our Location</h3>
-			<address>
-				Frontend Masters &middot;
-				60 South 6th Street &middot;
-				Suite 3625 &middot;
-				Minneapolis, MN 55402
-			</address>
-		</aside>
-	</div>
-	<script src="js/forms.js"></script>
-</body>
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="./js/portfolio.js"></script>
+	</body>
 </html>
-
-
-
-
-
