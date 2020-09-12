@@ -1,94 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Roland Levai - Web Developer</title>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-		<link rel="stylesheet" content-type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css">
-		<link rel="stylesheet" href="./css/style.css">
-	</head>
-	<body>
-		<div class="wrapper">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roland Levai - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" content-type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div>
+      <!-- NAV START -->
 
-			<!-- NAV START -->
+      <nav class="nav-bar">
+        <img class="nav-img" src="./imgs/RL_logo.png" height="40px" alt="My logo showing RL" />
+        <button type="buton" class="hamburger">Menu</button>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#welcome" class="nav-link">Welcome</a>
+          </li>
+          <li class="nav-item">
+            <a href="#bio" class="nav-link">Bio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#my-projects" class="nav-link">Work</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-			<nav class="nav-bar">
-				<ul class="nav-list">
-					<li class="nav-img"><img src="./imgs/RL_logo.png" alt="My logo showing RL"></li>
-					<li class="nav-item">
-						<a href="#welcome" class="nav-link">Welcome</a>
-					</li>
-					<li class="nav-item">
-						<a href="#bio" class="nav-link">Bio</a>
-					</li>
-					<li class="nav-item">
-						<a href="#my-projects" class="nav-link">Work</a>
-					</li>
-					<li class="nav-item">
-						<a href="#contact" class="nav-link">Contact</a>
-					</li>
-			</nav>
+      <!-- NAV END -->
 
-			<!-- NAV END -->
+      <main>
+        <!-- WELCOME START -->
 
-			<main class="main">
-
-				<!-- WELCOME START -->
-
-				<section id="welcome" class="section">
-					<h1 class="title">Hi, I'm Roland,</h1>
-					<p class="title-p">a web developer</p>
-				</section>
-				<section id="bio" class="section">
-					<img class="selfie" src="./imgs/selfie.png">
-					<p>My name is Roland Levai. I'm a 21 year old university student based near Budapest, Hungary and I only recently picked up on web development. I strive to become the best one out there, nonetheless.</p>
-					<p>A bit further down you'll be able to check out some of my previous works and even further down the webpage you'll find my contact info. Or just use the links at the top of the page.</p>
-				</section>
-
-				<!-- WELCOME END -->
-				<!-- WORK START -->
-
-				<section id="my-projects" class="section">
-					<h2>My projects</h2>
-					<div class="swiper-container">
-						<div class="swiper-button-prev"></div>
-   			  	<div class="swiper-button-next"></div>
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="https://codepen.io/Aegnorwynn219/full/JjXrJby"><img class="project-img" src="./imgs/survey-form-small.png" alt="My Survey Form project for freeCodeCamp"/><p><span class="code">&lt; </span>Survey Form<span class="code"> &sol;&gt;</span></p></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="https://codepen.io/Aegnorwynn219/full/mdPpJLO"><img class="project-img" src="./imgs/technical-documentation-small.png" alt="My Technical Documentation project for freeCodeCamp"/><p><span class="code">&lt; </span>Technical Documentation<span class="code"> &sol;&gt;</span></p></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="https://codepen.io/Aegnorwynn219/full/Rwaxpym"><img class="project-img" src="./imgs/portfolio-small.png" alt="My Portfolio project for freeCodeCamp"/><p><span class="code">&lt; </span>My (fake) portfolio<span class="code"> &sol;&gt;</span></p></a>
-							</div>
+        <section id="welcome">
+          <h1 class="title">Hi, I'm Roland,</h1>
+          <p class="title-p">a web developer</p>
+        </section>
+        <section id="bio">
+          <div class="container" id="bio-content-wrapper">
+						<img class="selfie" src="./imgs/selfie.png" />
+						<div class="bio-content">
+							<p>
+								My name is Roland Levai. I'm a 21 year old university student based near Budapest, Hungary and I only
+								recently picked up on web development. I strive to become the best one out there, nonetheless.
+							</p>
+							<p>
+								A bit further down you'll be able to check out some of my previous works and even further down the webpage
+								you'll find my contact info. Or just use the links at the top of the page.
+							</p>
 						</div>
-					</div>
-				</section>
+          </div>
+        </section>
 
-				<!-- WORK END -->
-				<!-- CONTACT START -->
+        <!-- WELCOME END -->
+        <!-- WORK START -->
 
-				<section id="contact" class="section">
-					<h2>Contact Me</h2>
-					<p>If you want to work with me, send me an email using the form below.</p>
-					<form class="form">
-						<label for="name"><input id="name" type="name" name="name" placeholder="Name"></label>
-						<label for="email"><input id="email" type="email" name="email" placeholder="Email"></label>
-						<br><label for="message"><textarea id="message" name="message" placeholder="Message"></textarea></label>
-						<button type="submit">Send</button>
-					</form>
-				</section>
+        <section id="my-projects">
+          <div class="container">
+            <h2>My projects</h2>
+            <div class="swiper-container">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="https://codepen.io/Aegnorwynn219/full/JjXrJby"
+                    ><img
+                      class="project-img"
+                      src="./imgs/survey-form-small.png"
+                      alt="My Survey Form project for freeCodeCamp"
+                    />
+                    <p><span class="code">&lt; </span>Survey Form<span class="code"> &sol;&gt;</span></p></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://codepen.io/Aegnorwynn219/full/mdPpJLO"
+                    ><img
+                      class="project-img"
+                      src="./imgs/technical-documentation-small.png"
+                      alt="My Technical Documentation project for freeCodeCamp"
+                    />
+                    <p><span class="code">&lt; </span>Technical Documentation<span class="code"> &sol;&gt;</span></p></a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <a href="https://codepen.io/Aegnorwynn219/full/Rwaxpym"
+                    ><img
+                      class="project-img"
+                      src="./imgs/portfolio-small.png"
+                      alt="My Portfolio project for freeCodeCamp"
+                    />
+                    <p><span class="code">&lt; </span>My (fake) portfolio<span class="code"> &sol;&gt;</span></p></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-				<!-- CONTACT END -->
+        <!-- WORK END -->
+        <!-- CONTACT START -->
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <p>If you want to work with me, send me an email using the form below.</p>
 
-			</main>
-		</div>
+          <form action="">
+            <div class="form-group"><input type-"text" name="name" placeholder="name" /></div>
+            <div class="form-group"><input type-"email" name="email" placeholder="Email" /></div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </section>
 
-		<script src="https://unpkg.com/popmotion/dist/popmotion.global.min.js"></script>
-		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-		<script src="./js/portfolio.js"></script>
-	</body>
+        <!-- CONTACT END -->
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/popmotion/dist/popmotion.global.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="./js/portfolio.js"></script>
+  </body>
 </html>
